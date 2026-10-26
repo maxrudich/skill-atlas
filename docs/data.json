@@ -1,0 +1,1845 @@
+{
+ "generated": "2026-10-26",
+ "categories": [
+  {
+   "id": "plan",
+   "name": "Планирование и сборка",
+   "icon": "map",
+   "hint": "От идеи до готового репозитория"
+  },
+  {
+   "id": "mobile",
+   "name": "Expo и React Native",
+   "icon": "phone",
+   "hint": "Навигация, интерфейс, данные, сборки, обновления"
+  },
+  {
+   "id": "design",
+   "name": "Дизайн и плавность",
+   "icon": "sparkles",
+   "hint": "Вкус, Apple HIG, анимации, анти-слоп"
+  },
+  {
+   "id": "quality",
+   "name": "Безопасность и качество",
+   "icon": "shield",
+   "hint": "Аудит, ревью, тесты, проверка перед сторами"
+  },
+  {
+   "id": "research",
+   "name": "Исследование и стратегия",
+   "icon": "compass",
+   "hint": "Что строить и что упростить"
+  },
+  {
+   "id": "marketing",
+   "name": "Маркетинг и конкуренты",
+   "icon": "megaphone",
+   "hint": "Запуск, тексты, ASO, разбор рынка"
+  },
+  {
+   "id": "biz",
+   "name": "Бизнес и решения",
+   "icon": "briefcase",
+   "hint": "Советники уровня C-suite и жёсткий разбор планов"
+  },
+  {
+   "id": "replica",
+   "name": "Клон приложения",
+   "icon": "copy",
+   "hint": "Конвейер replica-*: от разведки до деплоя"
+  },
+  {
+   "id": "tools",
+   "name": "Встроенные команды",
+   "icon": "terminal",
+   "hint": "Идут вместе с Claude Code"
+  }
+ ],
+ "stacks": [
+  {
+   "id": "expo",
+   "name": "Приложение на Expo",
+   "hint": "React Native, iOS и Android"
+  },
+  {
+   "id": "web",
+   "name": "Сайт или веб-интерфейс",
+   "hint": "Лендинги, панели, PWA"
+  },
+  {
+   "id": "bot",
+   "name": "Бот или бэкенд",
+   "hint": "Workers, Node, Python"
+  },
+  {
+   "id": "idea",
+   "name": "Новая идея с нуля",
+   "hint": "От вопроса «стоит ли» до первой версии"
+  },
+  {
+   "id": "release",
+   "name": "Перед релизом",
+   "hint": "Проверки, сторы, листинг"
+  },
+  {
+   "id": "biz",
+   "name": "Бизнес и решения",
+   "hint": "Деньги, рост, сомнения"
+  },
+  {
+   "id": "clone",
+   "name": "Клон чужого приложения",
+   "hint": "Clean-room, без копирования кода"
+  }
+ ],
+ "playbooks": [
+  {
+   "id": "new-product",
+   "name": "Новый продукт с нуля",
+   "for": [
+    "idea"
+   ],
+   "lead": "От вопроса «стоит ли» до готового репозитория.",
+   "steps": [
+    {
+     "ref": "agent:competitor-researcher",
+     "why": "Кто уже есть и на что жалуются люди"
+    },
+    {
+     "ref": "agent:feature-strategist",
+     "why": "Какие идеи в этом векторе стоят усилий"
+    },
+    {
+     "ref": "skill:1-start",
+     "why": "Зафиксировать, что строим и как вам удобно"
+    },
+    {
+     "ref": "skill:2-scope",
+     "why": "Урезать до цельной первой версии"
+    },
+    {
+     "ref": "skill:3-prd",
+     "why": "Описать продукт без кода"
+    },
+    {
+     "ref": "skill:4-spec",
+     "why": "Технический чертёж"
+    },
+    {
+     "ref": "skill:5-build",
+     "why": "Собрать по шагам"
+    },
+    {
+     "ref": "skill:6-ship",
+     "why": "Привести репозиторий в порядок и выкатить"
+    }
+   ]
+  },
+  {
+   "id": "expo-new",
+   "name": "Новое приложение на Expo",
+   "for": [
+    "expo",
+    "idea"
+   ],
+   "lead": "expo-overview вызывается первым и сам подскажет, что подключить дальше.",
+   "steps": [
+    {
+     "ref": "skill:expo-overview",
+     "why": "Определит цель и правила проекта"
+    },
+    {
+     "ref": "skill:expo-project-structure",
+     "why": "Разложить папки"
+    },
+    {
+     "ref": "skill:expo-router",
+     "why": "Экраны, вкладки, модалки"
+    },
+    {
+     "ref": "skill:expo-native-ui",
+     "why": "Нативный вид экранов"
+    },
+    {
+     "ref": "skill:expo-ui",
+     "why": "Системные листы, пикеры и переключатели"
+    },
+    {
+     "ref": "skill:expo-design-system",
+     "why": "Токены темы, чтобы всё выглядело единообразно"
+    },
+    {
+     "ref": "skill:expo-animation",
+     "why": "Жесты и анимации"
+    },
+    {
+     "ref": "skill:expo-data-fetching",
+     "why": "Данные и офлайн"
+    },
+    {
+     "ref": "skill:break-ui",
+     "why": "Сломать худшими данными"
+    }
+   ]
+  },
+  {
+   "id": "polish",
+   "name": "Довести экран до уровня Apple",
+   "for": [
+    "expo",
+    "web"
+   ],
+   "lead": "Экран работает, но не ощущается нативно.",
+   "steps": [
+    {
+     "ref": "skill:expo-native-ui",
+     "why": "Привести стили к системным"
+    },
+    {
+     "ref": "skill:apple-design",
+     "why": "Физика, материалы, типографика"
+    },
+    {
+     "ref": "skill:expo-animation",
+     "why": "Правильные пружины и жесты"
+    },
+    {
+     "ref": "skill:review-animations",
+     "why": "Строгое ревью движения"
+    },
+    {
+     "ref": "skill:break-ui",
+     "why": "Длинные имена, пустые списки"
+    },
+    {
+     "ref": "agent:qa-mobile",
+     "why": "Прогнать на симуляторе"
+    }
+   ]
+  },
+  {
+   "id": "smoothness",
+   "name": "Аудит плавности",
+   "for": [
+    "expo",
+    "web"
+   ],
+   "lead": "Фраза «аудит плавности Apple» запускает это.",
+   "steps": [
+    {
+     "ref": "skill:apple-design",
+     "why": "Проверка пружин, жестов, инерции, reduced motion"
+    },
+    {
+     "ref": "skill:review-animations",
+     "why": "Построчное ревью кода анимаций"
+    },
+    {
+     "ref": "skill:expo-animation",
+     "why": "Исправить найденное"
+    }
+   ]
+  },
+  {
+   "id": "refresh",
+   "name": "Приложение выглядит «как от ИИ»",
+   "for": [
+    "expo",
+    "web"
+   ],
+   "lead": "Сначала план упрощения, потом дизайн, потом проверка.",
+   "steps": [
+    {
+     "ref": "agent:ux-strategist",
+     "why": "План упрощения без правок"
+    },
+    {
+     "ref": "agent:design-taste",
+     "why": "Переделка со вкусом"
+    },
+    {
+     "ref": "agent:apple-native-designer",
+     "why": "Если нужен нативный вид Apple"
+    },
+    {
+     "ref": "agent:qa-mobile",
+     "why": "Проверка, что ничего не сломалось"
+    }
+   ]
+  },
+  {
+   "id": "release",
+   "name": "Перед релизом в сторы",
+   "for": [
+    "release",
+    "expo"
+   ],
+   "lead": "Порядок от кода к модерации.",
+   "steps": [
+    {
+     "ref": "agent:code-reviewer",
+     "why": "Баги и дыры в безопасности"
+    },
+    {
+     "ref": "agent:qa-mobile",
+     "why": "Сценарии на симуляторе"
+    },
+    {
+     "ref": "skill:absolute-audit",
+     "why": "Зависимости и секреты"
+    },
+    {
+     "ref": "agent:store-reviewer",
+     "why": "Что может привести к отказу"
+    },
+    {
+     "ref": "skill:app-store-optimization",
+     "why": "Листинг и ключевые слова"
+    },
+    {
+     "ref": "skill:eas-app-stores",
+     "why": "Сборка и отправка"
+    }
+   ]
+  },
+  {
+   "id": "expo-upgrade",
+   "name": "Обновить Expo SDK",
+   "for": [
+    "expo"
+   ],
+   "lead": "Обновление без сюрпризов.",
+   "steps": [
+    {
+     "ref": "skill:expo-upgrade",
+     "why": "Сам апгрейд и конфликты"
+    },
+    {
+     "ref": "skill:expo-dev-client",
+     "why": "Пересобрать dev-клиент"
+    },
+    {
+     "ref": "agent:qa-mobile",
+     "why": "Проверить основные потоки"
+    }
+   ]
+  },
+  {
+   "id": "launch",
+   "name": "Запуск и маркетинг",
+   "for": [
+    "release",
+    "idea"
+   ],
+   "lead": "Сначала контекст, чтобы не повторять одно и то же.",
+   "steps": [
+    {
+     "ref": "skill:marketing-context",
+     "why": "Аудитория, голос, позиционирование"
+    },
+    {
+     "ref": "skill:competitive-teardown",
+     "why": "Разобрать главных конкурентов"
+    },
+    {
+     "ref": "skill:launch-strategy",
+     "why": "План запуска"
+    },
+    {
+     "ref": "skill:ad-copywriter",
+     "why": "Тексты и объявления"
+    },
+    {
+     "ref": "skill:app-store-optimization",
+     "why": "Карточка в сторах"
+    }
+   ]
+  },
+  {
+   "id": "doubt",
+   "name": "Сомневаюсь в идее или решении",
+   "for": [
+    "biz",
+    "idea"
+   ],
+   "lead": "От проверки допущений до жёсткого разбора.",
+   "steps": [
+    {
+     "ref": "skill:stress-test",
+     "why": "Проверить допущения"
+    },
+    {
+     "ref": "skill:hard-call",
+     "why": "Выбрать из плохих вариантов"
+    },
+    {
+     "ref": "skill:executive-mentor",
+     "why": "Найти дыры в плане"
+    }
+   ]
+  },
+  {
+   "id": "clone",
+   "name": "Клон чужого приложения",
+   "for": [
+    "clone"
+   ],
+   "lead": "Либо одним агентом, либо по шагам.",
+   "steps": [
+    {
+     "ref": "agent:app-cloner",
+     "why": "Проходит весь конвейер сам"
+    },
+    {
+     "ref": "skill:replica-recon",
+     "why": "Разведка"
+    },
+    {
+     "ref": "skill:replica-architect",
+     "why": "Стек и схема"
+    },
+    {
+     "ref": "skill:replica-design",
+     "why": "Дизайн-токены"
+    },
+    {
+     "ref": "skill:replica-build",
+     "why": "Сборка экранов"
+    },
+    {
+     "ref": "skill:replica-backend",
+     "why": "Бэкенд"
+    },
+    {
+     "ref": "skill:replica-test",
+     "why": "Тесты"
+    },
+    {
+     "ref": "skill:replica-diff",
+     "why": "Сверка с оригиналом"
+    },
+    {
+     "ref": "skill:replica-entrepreneur",
+     "why": "Что улучшить по отзывам"
+    },
+    {
+     "ref": "skill:replica-brand",
+     "why": "Своё имя и внешний вид"
+    },
+    {
+     "ref": "skill:replica-launch",
+     "why": "Лендинг, цена, листинг"
+    },
+    {
+     "ref": "skill:replica-deploy",
+     "why": "Выкатить"
+    }
+   ]
+  },
+  {
+   "id": "foreign-skill",
+   "name": "Ставлю чужой скилл",
+   "for": [],
+   "lead": "Золотое правило: чужое не ставить без проверки.",
+   "steps": [
+    {
+     "ref": "skill:skill-security-auditor",
+     "why": "Сначала клон в отдельную папку и аудит"
+    },
+    {
+     "ref": "skill:absolute-audit",
+     "why": "Если скилл приносит скрипты, которые будут запускаться у вас"
+    }
+   ]
+  }
+ ],
+ "compare": [
+  {
+   "id": "design-web",
+   "name": "Дизайн сайта",
+   "lead": "Какой из дизайн-скиллов выбрать.",
+   "rows": [
+    {
+     "ref": "skill:design-taste-frontend",
+     "if": "Новый лендинг или портфолио с нуля"
+    },
+    {
+     "ref": "skill:redesign-existing-projects",
+     "if": "Проект уже есть, но выглядит как от ИИ"
+    },
+    {
+     "ref": "skill:high-end-visual-design",
+     "if": "Хочу, чтобы выглядело дорого"
+    },
+    {
+     "ref": "skill:apple-hig-expert",
+     "if": "Хочу нативный вид Apple"
+    },
+    {
+     "ref": "agent:design-taste",
+     "if": "Нужна полная переделка с проверкой на скриншотах"
+    }
+   ]
+  },
+  {
+   "id": "design-expo",
+   "name": "Внешний вид экрана в Expo",
+   "lead": "Пять скиллов про вид, у каждого своя зона.",
+   "rows": [
+    {
+     "ref": "skill:expo-native-ui",
+     "if": "Стилизую экран под системный: цвета, контролы, иконки"
+    },
+    {
+     "ref": "skill:expo-ui",
+     "if": "Нужны нативные листы, пикеры, переключатели, меню"
+    },
+    {
+     "ref": "skill:expo-design-system",
+     "if": "Всё выглядит по-разному, нужны токены и единый вид"
+    },
+    {
+     "ref": "skill:apple-design",
+     "if": "Важны физика, жесты, материалы, типографика"
+    },
+    {
+     "ref": "skill:apple-hig-expert",
+     "if": "Нужен аудит по Apple HIG и контрасту"
+    }
+   ]
+  },
+  {
+   "id": "motion",
+   "name": "Анимации и плавность",
+   "lead": "Написать, проверить или проверить всё.",
+   "rows": [
+    {
+     "ref": "skill:expo-animation",
+     "if": "Пишу анимацию или жест в Expo"
+    },
+    {
+     "ref": "skill:review-animations",
+     "if": "Анимации уже есть, нужен строгий разбор"
+    },
+    {
+     "ref": "skill:apple-design",
+     "if": "Нужен общий аудит плавности по принципам Apple"
+    },
+    {
+     "ref": "skill:mobile-native",
+     "if": "Веб на телефоне ведёт себя как сайт, а не как приложение"
+    }
+   ]
+  },
+  {
+   "id": "audit",
+   "name": "Проверка безопасности и качества",
+   "lead": "Что запускать и на что.",
+   "rows": [
+    {
+     "ref": "command:security-review",
+     "if": "Нужен быстрый взгляд на текущие правки"
+    },
+    {
+     "ref": "skill:absolute-audit",
+     "if": "Глубокий аудит своего репозитория: CVE, секреты, инъекции"
+    },
+    {
+     "ref": "skill:skill-security-auditor",
+     "if": "Проверить чужой скилл до установки"
+    },
+    {
+     "ref": "agent:code-reviewer",
+     "if": "Ревью свежих правок перед коммитом"
+    },
+    {
+     "ref": "command:code-review",
+     "if": "Ревью diff или PR с уровнями строгости"
+    },
+    {
+     "ref": "agent:store-reviewer",
+     "if": "Проверка перед модерацией в сторах"
+    }
+   ]
+  },
+  {
+   "id": "competitors",
+   "name": "Конкуренты",
+   "lead": "Четыре способа смотреть на рынок.",
+   "rows": [
+    {
+     "ref": "agent:competitor-researcher",
+     "if": "Разовая разведка до проекта, со ссылками на отзывы"
+    },
+    {
+     "ref": "skill:competitive-teardown",
+     "if": "Глубоко разобрать одного конкурента: цены, SWOT, SEO"
+    },
+    {
+     "ref": "skill:competitive-intel",
+     "if": "Постоянно следить за рынком и вести батлкарты"
+    },
+    {
+     "ref": "skill:replica-entrepreneur",
+     "if": "Понять боли пользователей конкретного приложения"
+    }
+   ]
+  },
+  {
+   "id": "shipping",
+   "name": "Выпуск приложения",
+   "lead": "Сборка, обновление, проверка, листинг.",
+   "rows": [
+    {
+     "ref": "skill:expo-dev-client",
+     "if": "Нужна dev-сборка для себя или тестеров"
+    },
+    {
+     "ref": "skill:eas-app-stores",
+     "if": "Собрать и отправить в TestFlight или сторы"
+    },
+    {
+     "ref": "skill:eas-update",
+     "if": "Выкатить правку JS без нового билда"
+    },
+    {
+     "ref": "agent:store-reviewer",
+     "if": "Проверить, не откажут ли на модерации"
+    },
+    {
+     "ref": "skill:app-store-optimization",
+     "if": "Написать листинг и подобрать ключевые слова"
+    },
+    {
+     "ref": "skill:6-ship",
+     "if": "Привести сам репозиторий в порядок"
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "agent:app-cloner",
+   "kind": "agent",
+   "name": "app-cloner",
+   "description": "Клонировщик приложений и сайтов по принципу clean-room. Используй, когда нужно построить собственную версию приложения или сайта, ссылку или скриншоты которого дал пользователь: разбирает функции и сценарии, планирует, строит с нуля, тестирует, сравнивает с оригиналом и ребрендит. Воспроизводит функциональность и UX, а не чужой код, ассеты или тексты.",
+   "model": "sonnet",
+   "tools": "Read, Write, Edit, Bash, Glob, Grep, Skill, WebSearch, WebFetch, mcp__Claude_Browser__navigate, mcp__Claude_Browser__computer, mcp__Claude_Browser__read_page, mcp__Claude_Browser__get_page_text, mcp__Claude_Browser__preview_start, mcp__Claude_Browser__resize_window",
+   "ru": "Клонирует приложение или сайт clean-room и проходит весь конвейер replica-*",
+   "when": "Есть ссылка на приложение, свою версию которого хотите",
+   "cat": "replica",
+   "for": [
+    "clone"
+   ],
+   "kw": "клон копия приложения clean room",
+   "eg": "app-cloner, вот ссылка: ...",
+   "origin": "мой набор"
+  },
+  {
+   "id": "agent:apple-native-designer",
+   "kind": "agent",
+   "name": "apple-native-designer",
+   "description": "Дизайнер в стиле нативного Apple. Используй, когда нужно переделать приложение или сайт так, чтобы он выглядел как родное приложение macOS/iOS (как Finder): стекло Liquid Glass, SF-шрифты, сайдбар, тулбар, сегментные контролы, системные отступы и анимации, все мелкие детали.",
+   "model": "sonnet",
+   "tools": "Read, Write, Edit, Bash, Glob, Grep, Skill, mcp__Claude_Browser__navigate, mcp__Claude_Browser__computer, mcp__Claude_Browser__read_page, mcp__Claude_Browser__preview_start, mcp__Claude_Browser__resize_window, mcp__Claude_Code_iOS_Simulator__control",
+   "ru": "Переделывает под нативный Apple: Liquid Glass, SF-шрифты, сайдбар, тулбар, как Finder",
+   "when": "Хотите, чтобы сайт или приложение выглядели как родное на macOS или iOS",
+   "cat": "design",
+   "for": [
+    "web",
+    "expo"
+   ],
+   "kw": "apple нативный liquid glass finder macos ios sf",
+   "eg": "Сделай сайт как нативное macOS-приложение",
+   "origin": "мой набор"
+  },
+  {
+   "id": "agent:code-reviewer",
+   "kind": "agent",
+   "name": "code-reviewer",
+   "description": "Строгий ревьюер кода, только чтение. Используй проактивно после завершения фичи или перед коммитом и деплоем: ищет баги, дыры в безопасности (секреты, инъекции, слабая авторизация), пропущенные состояния и ошибки обработки. Код не меняет, возвращает список находок.",
+   "model": "sonnet",
+   "tools": "Read, Grep, Glob, Bash",
+   "ru": "Строгий ревьюер, только чтение: баги, дыры в безопасности, пропущенные состояния",
+   "when": "После завершённой фичи, перед коммитом и деплоем",
+   "cat": "quality",
+   "for": [
+    "bot",
+    "web",
+    "expo",
+    "release"
+   ],
+   "kw": "ревью код баги безопасность review",
+   "vs": "Встроенный /code-review смотрит diff или PR",
+   "eg": "Прогони code-reviewer по моим последним правкам",
+   "origin": "мой набор"
+  },
+  {
+   "id": "agent:competitor-researcher",
+   "kind": "agent",
+   "name": "competitor-researcher",
+   "description": "Исследователь конкурентов и ниши. Используй до начала проекта или фичи: разбирает похожие приложения (функции, цены, экраны) и читает реальные отзывы пользователей, чтобы найти, что люди ненавидят и чего не хватает. Возвращает краткий отчёт со ссылками на источники.",
+   "model": "sonnet",
+   "tools": "WebSearch, WebFetch, Read, Write, Glob",
+   "ru": "Разбирает конкуренток и читает реальные отзывы: что ненавидят и чего не хватает, всё со ссылками",
+   "when": "ДО проекта или фичи",
+   "cat": "research",
+   "for": [
+    "idea",
+    "biz"
+   ],
+   "kw": "конкуренты отзывы ниша исследование",
+   "eg": "Разбери 4 конкурента трекера сна",
+   "origin": "мой набор"
+  },
+  {
+   "id": "agent:design-taste",
+   "kind": "agent",
+   "name": "design-taste",
+   "description": "Дизайнер-«антислоп». Используй, когда интерфейс приложения или сайта выглядит шаблонно, как сгенерированный нейросетью (одинаковые карточки, фиолетовые градиенты, безликие шрифты), и его нужно переделать со вкусом, в уровне дорогого агентства. Аудит, затем редизайн без поломки функциональности.",
+   "model": "sonnet",
+   "tools": "Read, Write, Edit, Bash, Glob, Grep, Skill, mcp__Claude_Browser__navigate, mcp__Claude_Browser__computer, mcp__Claude_Browser__read_page, mcp__Claude_Browser__preview_start, mcp__Claude_Browser__resize_window",
+   "ru": "Убирает «нейрослоп»: аудит и редизайн со вкусом без поломки функций",
+   "when": "Интерфейс выглядит шаблонно",
+   "cat": "design",
+   "for": [
+    "web",
+    "expo"
+   ],
+   "kw": "слоп редизайн вкус шаблонный",
+   "vs": "Нативный вид Apple — apple-native-designer",
+   "eg": "Переделай главный экран, чтобы не выглядел как ИИ",
+   "origin": "мой набор"
+  },
+  {
+   "id": "agent:feature-strategist",
+   "kind": "agent",
+   "name": "feature-strategist",
+   "description": "Стратег развития продукта. Используй, когда нужно решить, что добавить дальше: анализирует то, что в приложении или сайте уже есть, и предлагает новые фичи и улучшения в том же векторе, чтобы пользовательский опыт стал заметно лучше. Каждая идея обоснована, оценена и приоритизирована.",
+   "model": "opus",
+   "tools": "Read, Grep, Glob, Bash, Skill, WebSearch, WebFetch",
+   "ru": "Предлагает, что добавить дальше, в вектор продукта, с оценкой пользы и трудоёмкости",
+   "when": "Не знаете, какую фичу делать следующей",
+   "cat": "research",
+   "for": [
+    "idea",
+    "expo",
+    "web",
+    "bot"
+   ],
+   "kw": "фичи идеи роадмап приоритизация что добавить",
+   "eg": "Что добавить в моём приложении?",
+   "origin": "мой набор"
+  },
+  {
+   "id": "agent:qa-mobile",
+   "kind": "agent",
+   "name": "qa-mobile",
+   "description": "Тестировщик мобильных приложений на Maestro и iOS-симуляторе. Используй после правок UI или перед релизом, когда нужно проверить, что экраны и сценарии приложения работают: пишет flow-файлы Maestro, запускает их, смотрит скриншоты и возвращает баг-репорт.",
+   "model": "sonnet",
+   "tools": "Bash, Read, Write, Edit, Glob, Grep, mcp__Claude_Code_iOS_Simulator__control",
+   "ru": "Пишет и гоняет Maestro-тесты на симуляторе iOS, возвращает баг-репорт",
+   "when": "После правок интерфейса или перед релизом",
+   "cat": "quality",
+   "for": [
+    "expo",
+    "release"
+   ],
+   "kw": "тесты maestro симулятор баги qa прокликать",
+   "eg": "qa-mobile на моё приложение",
+   "origin": "мой набор"
+  },
+  {
+   "id": "agent:store-reviewer",
+   "kind": "agent",
+   "name": "store-reviewer",
+   "description": "Предрелизный ревьюер App Store и Google Play. Используй перед отправкой приложения на модерацию: детально сверяет проект с актуальными правилами Apple App Store Review Guidelines и политиками Google Play и находит всё, что может привести к отказу (приватность, покупки, вход, контент, метаданные, технические требования). Код не меняет.",
+   "model": "sonnet",
+   "tools": "Read, Grep, Glob, Bash, Skill, WebFetch, WebSearch",
+   "ru": "Предрелизная проверка на отказ App Store и Google Play по актуальным правилам",
+   "when": "Прямо перед отправкой на модерацию. Код не меняет",
+   "cat": "quality",
+   "for": [
+    "release",
+    "expo"
+   ],
+   "kw": "модерация отказ app store google play правила приватность review guidelines",
+   "eg": "Запусти store-reviewer на моё приложение",
+   "origin": "мой набор"
+  },
+  {
+   "id": "agent:ux-strategist",
+   "kind": "agent",
+   "name": "ux-strategist",
+   "description": "Стратег по упрощению. Используй, когда приложение или сайт стал тяжёлым, перегруженным или сложным: находит, как сделать продукт легче и проще в использовании, без потери функциональности (меньше шагов, меньше экранов, лишнее прячется, а не удаляется), и при необходимости облегчить код и производительность. Сначала анализ и план, правки только после согласования.",
+   "model": "opus",
+   "tools": "Read, Grep, Glob, Bash, Skill, WebSearch, WebFetch, mcp__Claude_Browser__navigate, mcp__Claude_Browser__computer, mcp__Claude_Browser__read_page, mcp__Claude_Browser__preview_start",
+   "ru": "Как сделать проще и легче без потери функций; сначала план, правки после согласования",
+   "when": "Приложение стало тяжёлым и перегруженным",
+   "cat": "research",
+   "for": [
+    "expo",
+    "web"
+   ],
+   "kw": "упростить перегружено ux меньше шагов производительность",
+   "eg": "Упрости моё приложение",
+   "origin": "мой набор"
+  },
+  {
+   "id": "command:claude-api",
+   "kind": "command",
+   "name": "claude-api",
+   "description": "",
+   "ru": "Справка по Claude API и SDK: модели, кэш, инструменты, потоки",
+   "when": "Пишете код, который вызывает Claude",
+   "cat": "tools",
+   "for": [
+    "bot",
+    "web"
+   ],
+   "kw": "claude api sdk anthropic модели",
+   "origin": "Claude Code"
+  },
+  {
+   "id": "command:code-review",
+   "kind": "command",
+   "name": "code-review",
+   "description": "",
+   "ru": "Ревью текущих правок или PR; уровни low…max, флаги --fix и --comment",
+   "when": "Закончили фичу",
+   "cat": "tools",
+   "for": [
+    "bot",
+    "web",
+    "expo",
+    "release"
+   ],
+   "kw": "ревью pr diff баги",
+   "origin": "Claude Code"
+  },
+  {
+   "id": "command:fewer-permission-prompts",
+   "kind": "command",
+   "name": "fewer-permission-prompts",
+   "description": "",
+   "ru": "Меньше запросов разрешений: добавляет безопасные команды в список",
+   "when": "Claude слишком часто спрашивает",
+   "cat": "tools",
+   "for": [],
+   "kw": "разрешения права prompts allowlist",
+   "origin": "Claude Code"
+  },
+  {
+   "id": "command:init",
+   "kind": "command",
+   "name": "init",
+   "description": "",
+   "ru": "Создаёт CLAUDE.md с описанием проекта",
+   "when": "Новый проект",
+   "cat": "tools",
+   "for": [
+    "idea",
+    "bot",
+    "web",
+    "expo"
+   ],
+   "kw": "claude.md инициализация",
+   "origin": "Claude Code"
+  },
+  {
+   "id": "command:loop",
+   "kind": "command",
+   "name": "loop",
+   "description": "",
+   "ru": "Повторяет команду по интервалу; без интервала сам выбирает темп",
+   "when": "Нужно периодически проверять что-то",
+   "cat": "tools",
+   "for": [],
+   "kw": "повтор интервал мониторинг",
+   "origin": "Claude Code"
+  },
+  {
+   "id": "command:run",
+   "kind": "command",
+   "name": "run",
+   "description": "",
+   "ru": "Запускает приложение проекта и проверяет, что правка работает",
+   "when": "Хотите увидеть изменение вживую",
+   "cat": "tools",
+   "for": [
+    "expo",
+    "web",
+    "bot"
+   ],
+   "kw": "запустить проверить скриншот",
+   "origin": "Claude Code"
+  },
+  {
+   "id": "command:schedule",
+   "kind": "command",
+   "name": "schedule",
+   "description": "",
+   "ru": "Облачные агенты по расписанию: «каждое утро…»",
+   "when": "Регулярные задачи без вас",
+   "cat": "tools",
+   "for": [],
+   "kw": "расписание cron рутина ежедневно",
+   "origin": "Claude Code"
+  },
+  {
+   "id": "command:security-review",
+   "kind": "command",
+   "name": "security-review",
+   "description": "",
+   "ru": "Быстрый встроенный аудит безопасности текущих правок",
+   "when": "Нужна быстрая проверка",
+   "cat": "tools",
+   "for": [
+    "bot",
+    "web",
+    "expo",
+    "release"
+   ],
+   "kw": "безопасность аудит быстро",
+   "vs": "Глубокий — absolute-audit",
+   "origin": "Claude Code"
+  },
+  {
+   "id": "command:simplify",
+   "kind": "command",
+   "name": "simplify",
+   "description": "",
+   "ru": "Переписывает изменённый код проще и чище, багов не ищет",
+   "when": "Код стал громоздким",
+   "cat": "tools",
+   "for": [
+    "bot",
+    "web",
+    "expo"
+   ],
+   "kw": "упростить рефакторинг чистка",
+   "origin": "Claude Code"
+  },
+  {
+   "id": "command:update-config",
+   "kind": "command",
+   "name": "update-config",
+   "description": "",
+   "ru": "Права, хуки и переменные окружения в settings.json",
+   "when": "Настроить поведение Claude Code",
+   "cat": "tools",
+   "for": [],
+   "kw": "настройки хуки hooks permissions settings",
+   "origin": "Claude Code"
+  },
+  {
+   "id": "skill:1-start",
+   "kind": "skill",
+   "name": "1-start",
+   "description": "Start planning a project (new or existing). Checks the folder, learns what the user wants to build, their background and how they like to work, and writes planning/profile.md that 2-scope and 3-prd read. Run this first, before 2-scope.",
+   "ru": "Старт проекта: выясняет, что строим и как вы любите работать",
+   "when": "Первый шаг нового проекта или большой фичи. Пишет planning/profile.md",
+   "cat": "plan",
+   "for": [
+    "idea",
+    "expo",
+    "web",
+    "bot"
+   ],
+   "kw": "начать старт новый проект профиль kickoff",
+   "eg": "/1-start для нового бота",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:2-scope",
+   "kind": "skill",
+   "name": "2-scope",
+   "description": "Find or sharpen a project idea and write the scope doc. A focused flipped-interaction interview that pulls the idea out of the user's head, then cuts it down to a coherent first version. Run after 1-start. Writes planning/scope.md.",
+   "ru": "Интервью, которое вытаскивает идею и урезает её до цельной первой версии",
+   "when": "После 1-start, когда идея ещё размыта. Пишет scope.md",
+   "cat": "plan",
+   "for": [
+    "idea"
+   ],
+   "kw": "идея скоуп scope mvp урезать интервью",
+   "eg": "/2-scope",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:3-prd",
+   "kind": "skill",
+   "name": "3-prd",
+   "description": "Turn the approved scope into a complete product definition: the core journey, every behavior, states and edge cases, and a firm first-version boundary. No code talk. Run after 2-scope. Writes planning/prd.md.",
+   "ru": "Полное описание продукта без кода: сценарии, состояния, границы версии 1",
+   "when": "Когда скоуп утверждён, а код писать рано. Пишет prd.md",
+   "cat": "plan",
+   "for": [
+    "idea"
+   ],
+   "kw": "prd требования сценарии состояния продукт",
+   "eg": "/3-prd",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:4-spec",
+   "kind": "skill",
+   "name": "4-spec",
+   "description": "Turn the approved PRD into a technical blueprint the build can follow (stack, where it runs, components, data, file structure), calibrated to the user and sized to a small first version. The last planning step before code. Run after 3-prd. Writes planning/spec.md.",
+   "ru": "Технический чертёж: стек, где живёт, данные, компоненты, файлы",
+   "when": "Последний шаг планирования перед кодом. Пишет spec.md",
+   "cat": "plan",
+   "for": [
+    "idea"
+   ],
+   "kw": "архитектура спецификация стек схема",
+   "eg": "/4-spec",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:5-build",
+   "kind": "skill",
+   "name": "5-build",
+   "description": "Turn the approved plan into ordered working build steps, then build the project step by step, verifying and committing each one, in learn mode or fast mode. Use after 4-spec, and again whenever a build session was interrupted. Reads and writes planning/checklist.md.",
+   "ru": "Собирает проект по шагам: каждый шаг проверяется и коммитится",
+   "when": "Когда план готов. Если сессия оборвалась, запустите снова и он продолжит. Режимы learn и fast",
+   "cat": "plan",
+   "for": [
+    "idea",
+    "expo",
+    "web",
+    "bot"
+   ],
+   "kw": "собрать билд строить реализовать чеклист",
+   "eg": "Прервались на шаге 5-build, продолжи",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:6-ship",
+   "kind": "skill",
+   "name": "6-ship",
+   "description": "Finish a project after 5-build. Verify it works, make the repository clean and safe, write run instructions, and optionally publish or deploy it. Run after 5-build, its final review and wrap-up are complete.",
+   "ru": "Финиш проекта: проверка, чистый безопасный репозиторий, инструкция запуска, деплой",
+   "when": "После 5-build. Это про порядок в репозитории, не про отправку в сторы",
+   "cat": "plan",
+   "for": [
+    "idea",
+    "release"
+   ],
+   "kw": "релиз финиш деплой readme репозиторий",
+   "vs": "Отправка в App Store и Google Play — eas-app-stores",
+   "eg": "/6-ship",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:absolute-audit",
+   "kind": "skill",
+   "name": "absolute-audit",
+   "description": "Vulnerability and security scan (defensive, your own repo): dependency CVEs plus risky code patterns (secrets, injection, weak authz), severity x reachability triaged and remediated without suppressing. Complements the built-in /security-review. Triggers on \"absolute audit\", \"security audit\", \"are we vulnerable\", \"scan for CVEs\", \"check for secrets/injection\", \"harden this\".",
+   "ru": "Поиск уязвимостей в своём репозитории: CVE зависимостей, секреты, инъекции, слабая авторизация",
+   "when": "Перед релизом или после крупных изменений",
+   "cat": "quality",
+   "for": [
+    "bot",
+    "web",
+    "expo",
+    "release"
+   ],
+   "kw": "безопасность уязвимости cve секреты инъекции аудит security",
+   "vs": "Чужой скилл до установки — skill-security-auditor. Быстрый — /security-review",
+   "eg": "/absolute-audit на мой бот",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:ad-copywriter",
+   "kind": "skill",
+   "name": "ad-copywriter",
+   "description": "广告创意写作与优化技能，覆盖标题、描述、正文及完整广告方案的生成与迭代，适用于Google Ads、Meta、LinkedIn、TikTok、Twitter/X等主流付费广告平台。当用户需要撰写广告文案、进行创意生成、标题撰写，或请求批量生产广告变体、基于数据进行创意测试与效果优化时触发。",
+   "ru": "Заголовки, описания и целые рекламные кампании для Google, Meta, LinkedIn, TikTok, X",
+   "when": "Нужны варианты объявлений для A/B или оптимизация по данным",
+   "cat": "marketing",
+   "for": [
+    "release"
+   ],
+   "kw": "реклама объявления копирайт заголовки ads a/b креатив",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:app-store-optimization",
+   "kind": "skill",
+   "name": "app-store-optimization",
+   "description": "App Store Optimization (ASO) toolkit for researching keywords, analyzing competitor rankings, generating metadata suggestions, and improving app visibility on Apple App Store and Google Play Store. Use when the user asks about ASO, app store rankings, app metadata, app titles and descriptions, app store listings, app visibility, or mobile app marketing on iOS or Android. Supports keyword research and scoring, competitor keyword analysis, metadata optimization, A/B test planning, launch checklists, and tracking ranking changes.",
+   "ru": "ASO: ключевые слова, заголовок, описание и листинг для App Store и Google Play",
+   "when": "Готовите карточку приложения в сторах",
+   "cat": "marketing",
+   "for": [
+    "release",
+    "expo"
+   ],
+   "kw": "aso ключевые слова листинг описание сторы метаданные",
+   "vs": "Проверка на отказ при модерации — агент store-reviewer",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:apple-design",
+   "kind": "skill",
+   "name": "apple-design",
+   "description": "Apple's approach to interface design and fluid, physical motion, translated for the web and React Native. Use when building or reviewing gesture-driven UI, spring animations, drag/swipe/sheet interactions, momentum and interruptible transitions, translucent materials and depth, typography (optical sizing, tracking, leading), reduced-motion, or the design foundations (feedback, spatial consistency, restraint) behind Apple-style interfaces.",
+   "ru": "Как Apple делает интерфейсы: пружины, жесты, инерция, прерываемость, материалы, типографика",
+   "when": "Строите или проверяете жесты и плавность. Основа для «аудита плавности». Работает для веба и React Native",
+   "cat": "design",
+   "for": [
+    "expo",
+    "web"
+   ],
+   "kw": "плавность аудит анимации жесты spring инерция материалы типографика reduced motion apple wwdc",
+   "vs": "Аудит по HIG — apple-hig-expert. Ревью кода анимаций — review-animations",
+   "eg": "Сделай аудит плавности Apple для моего приложения",
+   "origin": "Emil Kowalski (адаптирован: без рамок, с React Native)"
+  },
+  {
+   "id": "skill:apple-hig-expert",
+   "kind": "skill",
+   "name": "apple-hig-expert",
+   "description": "Audits and designs iOS/macOS/watchOS/visionOS interfaces against the Apple Human Interface Guidelines, including the Liquid Glass design language (announced WWDC25, shipped with iOS 26/macOS Tahoe, Sept 2025). Use when reviewing an Apple-platform mockup or app for HIG compliance, checking contrast or tap-target sizes, or designing native-feeling Apple UI (e.g., 'audit my iOS app against the HIG', 'is this text readable on Liquid Glass?').",
+   "ru": "Аудит и дизайн по Human Interface Guidelines, включая Liquid Glass",
+   "when": "Проверить экран на контраст, размеры касаний и нативность по Apple",
+   "cat": "design",
+   "for": [
+    "expo",
+    "web"
+   ],
+   "kw": "hig liquid glass контраст тап таргет ios macos нативный аудит",
+   "vs": "Полная переделка со скриншотами — агент apple-native-designer",
+   "eg": "/apple-hig-expert проверь экран настроек",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:break-ui",
+   "kind": "skill",
+   "name": "break-ui",
+   "description": "Try to break a piece of UI by feeding it worst-case data — long names, unbreakable emails, one-letter names, missing fields, huge counts, zero items, long labels, non-Latin text, emoji, extreme numbers — then render it behind a \"Demo data / Worst case\" toggle and report everything that broke, with the fix for each. Use when the user asks to stress-test, break, or find edge cases in a component or screen, or to \"try the worst case\". For visual design critique use apple-design; for motion use review-animations.",
+   "ru": "Ломает интерфейс худшими данными: длинные имена, пустые списки, огромные числа, эмодзи",
+   "when": "Экран готов и красив на демо-данных. Покажет, что рухнет на реальных",
+   "cat": "quality",
+   "for": [
+    "expo",
+    "web"
+   ],
+   "kw": "edge cases длинный текст пустой список переполнение стресс тест интерфейса worst case",
+   "eg": "break-ui на экран транзакций в моём приложении",
+   "origin": "Emil Kowalski"
+  },
+  {
+   "id": "skill:cfo-advisor",
+   "kind": "skill",
+   "name": "cfo-advisor",
+   "description": "Financial leadership for startups and scaling companies. Financial modeling, unit economics, fundraising strategy, cash management, and board financial packages. Use when building financial models, analyzing unit economics, planning fundraising, managing cash runway, preparing board materials, or when user mentions CFO, burn rate, runway, fundraising, unit economics, LTV, CAC, term sheets, or financial strategy.",
+   "ru": "Финмодель, юнит-экономика, runway, фандрейзинг",
+   "when": "Хватит ли денег, окупается ли привлечение, сколько просить",
+   "cat": "biz",
+   "for": [
+    "biz"
+   ],
+   "kw": "финансы деньги runway юнит экономика ltv cac бюджет инвестиции",
+   "eg": "cfo-advisor: хватит ли денег на 8 месяцев",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:cmo-advisor",
+   "kind": "skill",
+   "name": "cmo-advisor",
+   "description": "Marketing leadership for scaling companies. Brand positioning, growth model design, marketing budget allocation, and marketing org design. Use when designing brand strategy, selecting growth models (PLG vs sales-led vs community-led), allocating marketing budgets, building marketing teams, or when user mentions CMO, brand strategy, growth model, CAC, LTV, channel mix, or marketing ROI.",
+   "ru": "Бренд, модель роста, бюджет на маркетинг, команда",
+   "when": "Выбираете канал роста или распределяете маркетинговый бюджет",
+   "cat": "biz",
+   "for": [
+    "biz"
+   ],
+   "kw": "бренд рост каналы маркетинг бюджет cmo",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:code-to-prd",
+   "kind": "skill",
+   "name": "code-to-prd",
+   "description": "Reverse-engineer any codebase into a complete Product Requirements Document (PRD). Analyzes routes, components, state management, API integrations, and user interactions to produce business-readable documentation detailed enough for engineers or AI agents to fully reconstruct every page and endpoint. Works with frontend frameworks (React, Vue, Angular, Svelte, Next.js, Nuxt), backend frameworks (NestJS, Django, Express, FastAPI), and fullstack applications. Use when users mention: generate PRD, reverse-engineer requirements, code to documentation, extract product specs from code, document page logic, analyze page fields and interactions, create a functional inventory, write requirements from an existing codebase, document API endpoints, or analyze backend routes.",
+   "ru": "Из готового кода делает PRD: экраны, маршруты, поля, API",
+   "when": "Старый проект без документации или нужно описать, что приложение уже умеет",
+   "cat": "plan",
+   "for": [
+    "bot",
+    "web",
+    "expo"
+   ],
+   "kw": "reverse engineer документация из кода требования",
+   "eg": "code-to-prd на мой бот",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:competitive-intel",
+   "kind": "skill",
+   "name": "competitive-intel",
+   "description": "Systematic competitor tracking that feeds CMO positioning, CRO battlecards, and CPO roadmap decisions. Use when analyzing competitors, building sales battlecards, tracking market moves, positioning against alternatives, or when user mentions competitive intelligence, competitive analysis, competitor research, battlecards, win/loss, or market positioning.",
+   "ru": "Систематическое отслеживание конкурентов: батлкарты, позиционирование, влияние на роадмап",
+   "when": "Постоянный мониторинг рынка, а не разовая разведка",
+   "cat": "marketing",
+   "for": [
+    "biz",
+    "idea"
+   ],
+   "kw": "конкуренты мониторинг батлкарта рынок позиционирование",
+   "vs": "Глубокий разбор одного — competitive-teardown",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:competitive-teardown",
+   "kind": "skill",
+   "name": "competitive-teardown",
+   "description": "Analyzes competitor products and companies by synthesizing data from pricing pages, app store reviews, job postings, SEO signals, and social media into structured competitive intelligence. Produces feature comparison matrices scored across 12 dimensions, SWOT analyses, positioning maps, UX audits, pricing model breakdowns, action item roadmaps, and stakeholder presentation templates. Use when conducting competitor analysis, comparing products against competitors, researching the competitive landscape, building battle cards for sales, preparing for a product strategy or roadmap session, responding to a competitor's new feature or pricing change, or performing a quarterly competitive review.",
+   "ru": "Глубокий разбор конкурента: цены, отзывы, вакансии, SEO; матрица по 12 параметрам и SWOT",
+   "when": "Разово разобрать одного-двух конкурентов перед решением",
+   "cat": "marketing",
+   "for": [
+    "idea",
+    "biz"
+   ],
+   "kw": "конкурент разбор swot матрица цены отзывы teardown",
+   "vs": "Агент competitor-researcher читает отзывы и даёт отчёт со ссылками",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:context-engine",
+   "kind": "skill",
+   "name": "context-engine",
+   "description": "Loads and manages company context for all C-suite advisor skills. Reads ~/.claude/company-context.md, detects stale context (>90 days), enriches context during conversations, and enforces privacy/anonymization rules before external API calls. Use when starting any C-suite advisor session, when context looks stale or missing, or before sending company data to an external service.",
+   "ru": "Подгружает контекст компании, замечает, что он старше 90 дней, анонимизирует данные для внешних сервисов",
+   "when": "Работает вместе с советниками; вручную обычно не вызывается",
+   "cat": "biz",
+   "for": [
+    "biz"
+   ],
+   "kw": "контекст компании анонимизация устаревший",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:cpo-advisor",
+   "kind": "skill",
+   "name": "cpo-advisor",
+   "description": "Product leadership for scaling companies. Product vision, portfolio strategy, product-market fit, and product org design. Use when setting product vision, managing a product portfolio, measuring PMF, designing product teams, prioritizing at the portfolio level, reporting to the board on product, or when user mentions CPO, product strategy, product-market fit, product organization, portfolio prioritization, or roadmap strategy.",
+   "ru": "Видение продукта, PMF, приоритеты портфеля, продуктовая команда",
+   "when": "Куда развивать продукт и что делать первым",
+   "cat": "biz",
+   "for": [
+    "biz",
+    "idea"
+   ],
+   "kw": "продукт pmf приоритеты роадмап видение",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:cro-advisor",
+   "kind": "skill",
+   "name": "cro-advisor",
+   "description": "Revenue leadership for B2B SaaS companies. Revenue forecasting, sales model design, pricing strategy, net revenue retention, and sales team scaling. Use when designing the revenue engine, setting quotas, modeling NRR, evaluating pricing, building board forecasts, or when user mentions CRO, chief revenue officer, revenue strategy, sales model, ARR growth, NRR, expansion revenue, churn, pricing strategy, or sales capacity.",
+   "ru": "Выручка, цены, NRR, квоты и продажи для B2B SaaS",
+   "when": "Прогноз выручки, ценообразование, масштабирование продаж",
+   "cat": "biz",
+   "for": [
+    "biz"
+   ],
+   "kw": "выручка цены тарифы nrr продажи churn pricing",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:cs-onboard",
+   "kind": "skill",
+   "name": "cs-onboard",
+   "description": "Founder onboarding interview that captures company context across 7 dimensions. Invoke with /cs:setup for initial interview or /cs:update for quarterly refresh. Generates ~/.claude/company-context.md used by all C-suite advisor skills. Use when setting up the C-suite advisors for the first time, or when company context is missing or more than 90 days old — e.g. after a fundraise or pivot.",
+   "ru": "Интервью о компании по 7 темам; записывает контекст, который читают все советники",
+   "when": "Один раз для настройки советников и раз в квартал для обновления (/cs:setup, /cs:update)",
+   "cat": "biz",
+   "for": [
+    "biz"
+   ],
+   "kw": "контекст компании интервью setup советники",
+   "eg": "/cs:setup",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:cto-advisor",
+   "kind": "skill",
+   "name": "cto-advisor",
+   "description": "Technical leadership guidance for engineering teams, architecture decisions, and technology strategy. Use when assessing technical debt, scaling engineering teams, evaluating technologies, making architecture decisions, establishing engineering metrics, or when user mentions CTO, tech debt, technical debt, team scaling, architecture decisions, technology evaluation, engineering metrics, DORA metrics, or technology strategy.",
+   "ru": "Техдолг, архитектурные решения, рост команды, метрики разработки",
+   "when": "Решаете, что переписывать, на чём строить и как мерить скорость",
+   "cat": "biz",
+   "for": [
+    "biz",
+    "bot"
+   ],
+   "kw": "техдолг архитектура команда dora технологии выбор стека",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:design-taste-frontend",
+   "kind": "skill",
+   "name": "design-taste-frontend",
+   "description": "Anti-slop frontend skill for landing pages, portfolios, and redesigns. The agent reads the brief, infers the right design direction, and ships interfaces that do not look templated. Real design systems when applicable, audit-first on redesigns, strict pre-flight check.",
+   "ru": "Анти-слоп для лендингов и портфолио: читает бриф, выбирает направление, строгий чек в конце",
+   "when": "Новый сайт, лендинг или портфолио с нуля",
+   "cat": "design",
+   "for": [
+    "web"
+   ],
+   "kw": "лендинг портфолио сайт дизайн вкус слоп brief",
+   "vs": "Проект уже есть — redesign-existing-projects",
+   "eg": "Сделай лендинг для бота через design-taste-frontend",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:eas-app-stores",
+   "kind": "skill",
+   "name": "eas-app-stores",
+   "description": "Build and submit iOS and Android apps with EAS to TestFlight, the App Store, or Google Play. Supports Expo and other React Native projects, plus existing native apps. Use for eas.json setup, release pipelines, signing, app versions and build numbers, store submissions, and listing metadata. For Expo websites and API routes, use eas-hosting; for adding React Native screens to a native app, use expo-brownfield.",
+   "ru": "Сборка и отправка в TestFlight, App Store и Google Play через EAS",
+   "when": "eas.json, подпись, версии, сборка и сабмит, метаданные листинга",
+   "cat": "mobile",
+   "for": [
+    "expo",
+    "release"
+   ],
+   "kw": "eas build submit testflight app store google play подпись версия релиз",
+   "vs": "Проверка на отказ — агент store-reviewer. Листинг — app-store-optimization",
+   "eg": "Отправь приложение в TestFlight",
+   "origin": "Expo"
+  },
+  {
+   "id": "skill:eas-update",
+   "kind": "skill",
+   "name": "eas-update",
+   "description": "Configure and use EAS Update for over-the-air JavaScript and asset updates with expo-updates and EAS CLI. Use when setting up OTA updates, running eas update:configure or eas update, publishing to preview/staging/production channels, explaining branches/channels/runtime versions, testing updates, or debugging why an installed build still shows old code. Load for TestFlight, preview, or production updates that do not appear, including questions about cold launches or reopening the app. Not for update health metrics; use eas-update-insights for adoption, crashes, and rollout monitoring.",
+   "ru": "OTA-обновления JavaScript без модерации: каналы, ветки, runtime-версии",
+   "when": "Хотите выкатить правку без нового билда или не доходит обновление до сборки",
+   "cat": "mobile",
+   "for": [
+    "expo",
+    "release"
+   ],
+   "kw": "ota обновление expo-updates канал ветка runtime версия eas update",
+   "origin": "Expo"
+  },
+  {
+   "id": "skill:executive-mentor",
+   "kind": "skill",
+   "name": "executive-mentor",
+   "description": "Adversarial thinking partner for founders and executives. Stress-tests plans, prepares for brutal board meetings, dissects decisions with no good options, and forces honest post-mortems. Use when you need someone to find the holes before the board does, make a decision you've been avoiding, or understand what actually went wrong.",
+   "ru": "Жёсткий спарринг-партнёр: ищет дыры в плане до того, как их найдёт совет",
+   "when": "Готовитесь к трудному разговору или разбираете ошибку",
+   "cat": "biz",
+   "for": [
+    "biz",
+    "idea"
+   ],
+   "kw": "критика план дыры совет директоров разбор ошибок post mortem",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:expo-animation",
+   "kind": "skill",
+   "name": "expo-animation",
+   "description": "Build animations in React Native and Expo, making the decisions in the order that determines whether they feel right — should it animate, which thread it runs on, which properties, spring or timing, how the gesture hands off, how it degrades. Writes the implementation with Reanimated, Gesture Handler, Expo Router and expo-haptics. Use when animating anything in an Expo app, adding gestures, sheets, screen transitions, press feedback or haptics, or fixing motion that stutters on device. For web animation use `animate`.",
+   "ru": "Анимации и жесты в Expo: что анимировать, на каком потоке, пружина или кривая, передача скорости",
+   "when": "Пишете анимацию, шторку, жест, переход или хаптик, либо чините дёргающуюся анимацию",
+   "cat": "mobile",
+   "for": [
+    "expo"
+   ],
+   "kw": "анимация жесты reanimated gesture handler haptics spring пружина переход",
+   "vs": "Проверить уже написанное — review-animations. Принципы Apple — apple-design",
+   "eg": "Добавь свайп-закрытие шторки с инерцией",
+   "origin": "Expo (с Emil Kowalski)"
+  },
+  {
+   "id": "skill:expo-data-fetching",
+   "kind": "skill",
+   "name": "expo-data-fetching",
+   "description": "Use when implementing or debugging ANY network request, API call, or data fetching. Covers fetch API, React Query, SWR, error handling, caching, offline support, loading/empty/error screen states, and Expo Router data loaders (`useLoaderData`).",
+   "ru": "Сеть и данные: fetch, React Query, SWR, кэш, офлайн, состояния загрузки и ошибок",
+   "when": "Любой запрос к API, кэширование, офлайн или лоадеры Expo Router",
+   "cat": "mobile",
+   "for": [
+    "expo"
+   ],
+   "kw": "api запросы react query swr кэш оффлайн loading error fetch",
+   "eg": "Подключи синхронизацию с API через React Query",
+   "origin": "Expo"
+  },
+  {
+   "id": "skill:expo-design-system",
+   "kind": "skill",
+   "name": "expo-design-system",
+   "description": "Build and maintain a design system inside an Expo app - a reusable theme of design tokens (color, spacing, typography, radius, shadow, motion), reusable component structure with variant/size/state prop conventions, and rules for when to extract a repeated view into a shared component. Use when creating or organizing theme files and design tokens (theme.ts / theme/), extending an existing theme or styling library (NativeWind, Tamagui, Restyle, Unistyles) in its own idiom, standardizing styles so screens (including AI-generated ones) look consistent and polished, fixing an app that looks AI-generated or generic instead of native (the named native-slop tells), building an in-app component library, or auditing an app for design-system drift (hardcoded colors, spacing, fonts). For platform styling specifics (semantic colors, HIG rules, native controls) use expo-native-ui; for folder layout of a new app use expo-project-structure.",
+   "ru": "Дизайн-система внутри приложения: токены темы, компоненты, борьба с «ИИ-видом»",
+   "when": "Экраны выглядят по-разному, разбросаны цвета и отступы, или приложение похоже на сгенерированное",
+   "cat": "mobile",
+   "for": [
+    "expo"
+   ],
+   "kw": "токены тема цвета отступы шрифты слоп консистентность design system theme",
+   "vs": "Правила платформы и контролы — expo-native-ui",
+   "eg": "Проверь приложение на расхождения в дизайн-системе",
+   "origin": "Expo"
+  },
+  {
+   "id": "skill:expo-dev-client",
+   "kind": "skill",
+   "name": "expo-dev-client",
+   "description": "Build and distribute Expo development clients locally or via TestFlight for internal testing. For production TestFlight releases and store submission, use the eas-app-stores skill.",
+   "ru": "Dev-сборки Expo локально или через TestFlight для внутренних тестов",
+   "when": "Нужны нативные модули вне Expo Go или раздать сборку тестерам",
+   "cat": "mobile",
+   "for": [
+    "expo",
+    "release"
+   ],
+   "kw": "dev client development build testflight тест нативные модули",
+   "vs": "Релиз в сторы — eas-app-stores",
+   "origin": "Expo"
+  },
+  {
+   "id": "skill:expo-native-ui",
+   "kind": "skill",
+   "name": "expo-native-ui",
+   "description": "Build beautiful, native-feeling Expo screens. Covers Apple HIG styling, semantic colors, native controls, SF Symbols, media, visual effects, gradients, storage, and responsive layout. For routing and navigation, use the expo-router skill; for motion and animation, use the expo-animation skill.",
+   "ru": "Нативный вид экранов: цвета HIG, контролы, SF Symbols, медиа, эффекты",
+   "when": "Стилизуете экран, чтобы он выглядел как системный, а не как веб",
+   "cat": "mobile",
+   "for": [
+    "expo"
+   ],
+   "kw": "нативный ui стили цвета sf symbols градиент hig экран",
+   "vs": "Токены и единый вид — expo-design-system. Нативные листы и пикеры — expo-ui",
+   "eg": "Сделай этот экран нативным",
+   "origin": "Expo"
+  },
+  {
+   "id": "skill:expo-overview",
+   "kind": "skill",
+   "name": "expo-overview",
+   "description": "Entry point and router for every Expo or EAS task. Load this skill first — before writing code and before choosing another expo-* / eas-* skill — when the request, PRD, or spec mentions Expo, EAS, Expo Go, or an expo-* package, or the project has an `expo` dependency in `package.json`. Within that gate it also covers app specs and designs to implement (tabs, stacks, maps, lists, navigation, building from a screenshot), and phrasings like 'implement a mobile app', 'make my app look native', 'add navigation', 'fetch some data', 'upgrade my SDK', 'add Expo to my existing native app', 'ship to the App Store', or 'I'm new to Expo, where do I start'. A fully specified request (SDK pinned, libraries named, layout given) still routes through here — the shared setup rules still apply. Do NOT load it when neither signal is present: a bare React Native project with no `expo` dependency is not Expo work. Detects the real goal, routes to the right expo-* / eas-* skill, and owns the shared setup rules.",
+   "ru": "Входная точка для любой задачи Expo и EAS: определяет цель и отправляет к нужному скиллу",
+   "when": "Любая работа в проекте с зависимостью expo. Грузится первым",
+   "cat": "mobile",
+   "for": [
+    "expo"
+   ],
+   "kw": "expo eas старт роутер react native приложение",
+   "vs": "Не нужен для голого React Native без expo",
+   "eg": "Сделай экран настроек в моём приложении",
+   "origin": "Expo"
+  },
+  {
+   "id": "skill:expo-project-structure",
+   "kind": "skill",
+   "name": "expo-project-structure",
+   "description": "Folder structure for a new Expo app. Use when scaffolding or laying out a new Expo project with Expo Router, or deciding where a file should live in one. For new projects only — never restructure an existing app to match.",
+   "ru": "Как разложить папки нового Expo-приложения",
+   "when": "Только при создании нового проекта. Существующий не перекладывает",
+   "cat": "mobile",
+   "for": [
+    "expo"
+   ],
+   "kw": "структура папок src app routes layout scaffold",
+   "eg": "Разложи структуру нового Expo-приложения",
+   "origin": "Expo"
+  },
+  {
+   "id": "skill:expo-router",
+   "kind": "skill",
+   "name": "expo-router",
+   "description": "Navigation and routing for Expo Router. Covers file-based routes, groups and dynamic routes, folder organization, Link with previews and context menus, native Stack, page titles, modals and form sheets, NativeTabs, headers and toolbars, and header search bars.",
+   "ru": "Навигация Expo Router: маршруты, стеки, вкладки, модалки, шторки, заголовки",
+   "when": "Добавляете экран, вкладку, модалку или ссылку между экранами",
+   "cat": "mobile",
+   "for": [
+    "expo"
+   ],
+   "kw": "навигация роутер табы tabs stack modal sheet header link",
+   "eg": "Добавь вкладку «Сон» с нативными табами",
+   "origin": "Expo"
+  },
+  {
+   "id": "skill:expo-ui",
+   "kind": "skill",
+   "name": "expo-ui",
+   "description": "Build native UI with the @expo/ui package: real SwiftUI on iOS and Jetpack Compose on Android. Default to @expo/ui for sheets (BottomSheet), pickers, sliders, toggles, menus, and grouped-form sections — do NOT reach for Reanimated, @gorhom/bottom-sheet, or RN built-in Picker/Switch; use @expo/ui instead. Fall back to RN built-ins only when @expo/ui is missing the component. NOTE: @expo/ui List renders native grouped rows like an iOS Settings screen — it is NOT a virtualized list; use FlatList/FlashList for large datasets. Covers universal components (Host, Column, Row, Button, Text, List, BottomSheet, FieldGroup, Switch, Slider, Picker, Menu), drop-in replacements for RN community libraries, and platform-specific SwiftUI/Jetpack Compose trees. Not for Expo Router navigation, Reanimated, or data fetching.",
+   "ru": "Настоящие SwiftUI и Jetpack Compose компоненты через @expo/ui: листы, пикеры, переключатели, меню",
+   "when": "Нужны шторка, пикер, слайдер, меню или форма из системных контролов",
+   "cat": "mobile",
+   "for": [
+    "expo"
+   ],
+   "kw": "swiftui compose bottom sheet picker slider switch menu форма контролы",
+   "vs": "List из @expo/ui не виртуальный — для больших списков FlatList или FlashList",
+   "eg": "Замени пикер на нативный",
+   "origin": "Expo"
+  },
+  {
+   "id": "skill:expo-upgrade",
+   "kind": "skill",
+   "name": "expo-upgrade",
+   "description": "Guidelines for upgrading Expo SDK versions and fixing dependency issues",
+   "ru": "Обновление версии Expo SDK и починка конфликтов зависимостей",
+   "when": "Выходит новый SDK или ломаются пакеты после обновления",
+   "cat": "mobile",
+   "for": [
+    "expo"
+   ],
+   "kw": "апгрейд обновление sdk зависимости depcheck",
+   "eg": "Обнови моё приложение до свежего SDK",
+   "origin": "Expo"
+  },
+  {
+   "id": "skill:founder-coach",
+   "kind": "skill",
+   "name": "founder-coach",
+   "description": "Personal leadership development for founders and first-time CEOs. Covers founder archetype identification, delegation frameworks, energy management, CEO calendar audits, leadership style evolution, blind spot identification, imposter syndrome, founder mental health, and succession planning. Use when a founder feels like the bottleneck, struggles to delegate, is burning out, transitioning from IC to executive, managing a board, or when user mentions founder mode, CEO growth, leadership development, delegation, burnout, or imposter syndrome.",
+   "ru": "Лидерство основателя: делегирование, выгорание, роль CEO, синдром самозванца",
+   "when": "Вы стали бутылочным горлышком или выгораете",
+   "cat": "biz",
+   "for": [
+    "biz"
+   ],
+   "kw": "выгорание делегирование основатель ceo самозванец коуч",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:full-output-enforcement",
+   "kind": "skill",
+   "name": "full-output-enforcement",
+   "description": "Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply to any task requiring exhaustive, unabridged output.",
+   "ru": "Запрещает обрезать код и ставить заглушки вроде «остальное так же»",
+   "when": "Нужен файл целиком, а не фрагмент",
+   "cat": "plan",
+   "for": [
+    "expo",
+    "web",
+    "bot"
+   ],
+   "kw": "полный код без заглушек truncation placeholder",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:hard-call",
+   "kind": "skill",
+   "name": "hard-call",
+   "description": "/em:hard-call — Framework for decisions with no good options. Use when every option is painful and a structured 10/10/10 + regret-minimization pass is needed — e.g. choosing between a layoff and a down round, or killing a beloved product line.",
+   "ru": "Решения, где все варианты плохи: 10/10/10 и минимизация сожалений",
+   "when": "Нужно выбрать из плохих вариантов и не мучиться",
+   "cat": "biz",
+   "for": [
+    "biz"
+   ],
+   "kw": "трудное решение выбор сожаление 10/10/10 /em:hard-call",
+   "eg": "/em:hard-call",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:high-end-visual-design",
+   "kind": "skill",
+   "name": "high-end-visual-design",
+   "description": "Teaches the AI to design like a high-end agency. Defines the exact fonts, spacing, shadows, card structures, and animations that make a website feel expensive. Blocks all the common defaults that make AI designs look cheap or generic.",
+   "ru": "Как у дорогого агентства: шрифты, отступы, тени, карточки, анимации; запрещает дешёвые дефолты",
+   "when": "Хочется, чтобы сайт выглядел «дорого»",
+   "cat": "design",
+   "for": [
+    "web"
+   ],
+   "kw": "премиум дорого агентство шрифты отступы тени визуал",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:launch-strategy",
+   "kind": "skill",
+   "name": "launch-strategy",
+   "description": "When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early access,' 'waitlist,' 'product update,' 'GTM plan,' 'launch checklist,' or 'launch momentum.' This skill covers phased launches, channel strategy, and ongoing launch momentum.",
+   "ru": "План запуска: Product Hunt, waitlist, бета, анонс фичи, чек-лист",
+   "when": "Готовитесь выпускать продукт или крупную фичу",
+   "cat": "marketing",
+   "for": [
+    "release",
+    "idea"
+   ],
+   "kw": "запуск релиз product hunt gtm waitlist анонс beta",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:marketing-context",
+   "kind": "skill",
+   "name": "marketing-context",
+   "description": "Create and maintain the marketing context document that all marketing skills read before starting. Use when the user mentions 'marketing context,' 'brand voice,' 'set up context,' 'target audience,' 'ICP,' 'style guide,' 'who is my customer,' 'positioning,' or wants to avoid repeating foundational information across marketing tasks. Run this at the start of any new project before using other marketing skills.",
+   "ru": "Один раз записывает аудиторию, голос бренда и позиционирование для всех маркетинговых скиллов",
+   "when": "Перед любой маркетинговой работой, чтобы не повторять одно и то же",
+   "cat": "marketing",
+   "for": [
+    "idea",
+    "release"
+   ],
+   "kw": "бренд аудитория позиционирование голос icp контекст",
+   "eg": "/marketing-context для моего бота",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:mobile-native",
+   "kind": "skill",
+   "name": "mobile-native",
+   "description": "Make a web app feel native on a phone — the small CSS and meta-tag fixes that separate \"a website in a browser\" from something that feels installed. Covers sticky hover states, tap highlight flashes, the 100vh bug, inputs that zoom the page, laggy taps, pull-to-refresh hijacking scroll, content under the notch, long-press selecting button text, carousels that scroll the wrong way, mismatched status bars, and the rule that you test on real hardware. Use when a web app is being built for or reviewed on mobile, when something \"works in Chrome but feels wrong on my phone\", when building a PWA, a bottom sheet, a carousel, a full-screen layout, or any touch interaction. For motion itself use apple-design; for React Native use expo-animation.",
+   "ru": "Чтобы веб-приложение на телефоне вело себя как установленное: hover, 100vh, зум, notch, жесты",
+   "when": "Сайт или PWA «в Chrome нормально, а на телефоне не так»",
+   "cat": "design",
+   "for": [
+    "web"
+   ],
+   "kw": "pwa телефон safe area 100vh tap highlight zoom мобильный веб нативность",
+   "vs": "Для React Native — expo-native-ui",
+   "origin": "Emil Kowalski"
+  },
+  {
+   "id": "skill:onboarding-cro",
+   "kind": "skill",
+   "name": "onboarding-cro",
+   "description": "When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions \"onboarding flow,\" \"activation rate,\" \"user activation,\" \"first-run experience,\" \"empty states,\" \"onboarding checklist,\" \"aha moment,\" or \"new user experience.\" For signup/registration optimization, see signup-flow-cro. For ongoing email sequences, see email-sequence.",
+   "ru": "Активация после регистрации: первый запуск, пустые экраны, «ага-момент»",
+   "when": "Пользователи ставят приложение и уходят, не поняв ценности",
+   "cat": "marketing",
+   "for": [
+    "expo",
+    "web",
+    "release"
+   ],
+   "kw": "онбординг активация первый запуск empty state time to value",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:redesign-existing-projects",
+   "kind": "skill",
+   "name": "redesign-existing-projects",
+   "description": "Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS framework or vanilla CSS.",
+   "ru": "Апгрейд существующего проекта: аудит, поиск шаблонных ИИ-паттернов, правки без поломок",
+   "when": "Проект работает, но выглядит как сгенерированный",
+   "cat": "design",
+   "for": [
+    "web",
+    "expo"
+   ],
+   "kw": "редизайн аудит ии слоп апгрейд существующий",
+   "vs": "Новый лендинг с нуля — design-taste-frontend",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:replica-architect",
+   "kind": "skill",
+   "name": "replica-architect",
+   "description": "Plans the stack, database schema and API for an app clone, from the recon map replica-recon wrote. Picks boring, managed tech, turns the inferred data model into real SQL with indexes and access rules, lists every route by flow, and orders the build as a thin vertical slice first. Use when the user says \"plan the clone\", \"what stack should I use\", \"design the database\", \"write the schema\", \"plan the API\", \"architecture for my version of X\", or after /replica-recon finishes.",
+   "ru": "Стек, схема БД, API и порядок сборки для клона",
+   "when": "Шаг 2, после разведки",
+   "cat": "replica",
+   "for": [
+    "clone"
+   ],
+   "kw": "архитектура стек схема бд api клон",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:replica-backend",
+   "kind": "skill",
+   "name": "replica-backend",
+   "description": "Builds the backend of an app clone: auth, database migrations and access rules, payments with Stripe, email, background jobs and third-party integrations through official APIs only, plus a security checklist. Use when the user says \"add login\", \"set up auth\", \"wire up the database\", \"add payments\", \"connect Stripe\", \"add Google Calendar\", \"send emails\", \"backend for my clone\", or when /replica-build is running on fake data.",
+   "ru": "Бэкенд клона: вход, база, платежи, письма, интеграции по официальным API",
+   "when": "Шаг 5",
+   "cat": "replica",
+   "for": [
+    "clone",
+    "bot"
+   ],
+   "kw": "бэкенд авторизация stripe платежи email клон",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:replica-brand",
+   "kind": "skill",
+   "name": "replica-brand",
+   "description": "Names and rebrands an app clone so it is the user's own: name candidates with the trademark, domain, store and handle checks to run, a new palette checked for contrast, a logo brief, a voice guide, and a sweep tool that finds anything of the original left in the codebase. Use when the user says \"name my app\", \"rebrand the clone\", \"make it mine\", \"pick a name and colours\", \"logo brief\", \"brand voice\", \"check for leftovers\", or after /replica-entrepreneur. Always runs before /replica-launch.",
+   "ru": "Имя, палитра, логотип, поиск остатков оригинала в коде",
+   "when": "Шаг 9, всегда перед запуском",
+   "cat": "replica",
+   "for": [
+    "clone"
+   ],
+   "kw": "бренд имя логотип палитра ребрендинг клон",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:replica-build",
+   "kind": "skill",
+   "name": "replica-build",
+   "description": "Rebuilds an app screen by screen from the recon map: app shell first, then the core flow as a vertical slice, then every screen with all its states, ticking off the feature matrix as it goes. Writes every line fresh, never the original's code, assets or copy. Use when the user says \"build the clone\", \"build screen S07\", \"start building\", \"rebuild this screen\", \"implement the booking page\", or after /replica-design.",
+   "ru": "Сборка клона экран за экраном по карте разведки",
+   "when": "Шаг 4. Каждую строку пишет заново, без чужого кода",
+   "cat": "replica",
+   "for": [
+    "clone"
+   ],
+   "kw": "сборка экраны клон build",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:replica-deploy",
+   "kind": "skill",
+   "name": "replica-deploy",
+   "description": "Ships an app clone live on the user's own domain: a preflight gate (tests green, parity must-haves done, rebrand sweep clean, listing linted, legal pages up), production database and env vars, the host, DNS records for the domain and for email, Stripe live mode, OAuth redirects, monitoring, and mobile builds to TestFlight and Play. Use when the user says \"deploy it\", \"ship it\", \"put it live\", \"connect my domain\", \"go to production\", \"publish the app\", or after /replica-launch.",
+   "ru": "Выкатывает клон на ваш домен: DNS, Stripe, OAuth, мониторинг, сборки в сторы",
+   "when": "Шаг 11, последний",
+   "cat": "replica",
+   "for": [
+    "clone"
+   ],
+   "kw": "деплой домен dns stripe продакшен клон",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:replica-design",
+   "kind": "skill",
+   "name": "replica-design",
+   "description": "Rebuilds an app's design system for a clone: colour roles, type scale, spacing, radius, shadows and every component with its states, as design tokens plus component specs, with original assets instead of the target's logos, icons, illustrations or licensed fonts. Includes a WCAG contrast checker. Use when the user says \"match the design\", \"rebuild the design system\", \"get the colours and fonts\", \"make it look like X\", \"design tokens for my clone\", or after /replica-architect.",
+   "ru": "Токены дизайна и компоненты клона со своими ассетами, проверка контраста",
+   "when": "Шаг 3",
+   "cat": "replica",
+   "for": [
+    "clone"
+   ],
+   "kw": "дизайн токены цвета шрифты контраст клон",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:replica-diff",
+   "kind": "skill",
+   "name": "replica-diff",
+   "description": "Compares an app clone against the original: a feature parity score from the feature matrix (weighted by must, should, could) with the missing list in build order, plus a screenshot layout diff that ignores colour so a rebrand does not count against you. Two standard-library Python tools. Use when the user says \"how close is my clone\", \"compare it to the original\", \"what's missing\", \"parity check\", \"diff the screens\", \"is it ready\", or after /replica-test.",
+   "ru": "Сравнивает клон с оригиналом: паритет функций в процентах и раскладка экранов",
+   "when": "Шаг 7. Показывает, чего не хватает",
+   "cat": "replica",
+   "for": [
+    "clone"
+   ],
+   "kw": "паритет сравнение diff клон процент",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:replica-entrepreneur",
+   "kind": "skill",
+   "name": "replica-entrepreneur",
+   "description": "Researches the app being cloned and reads what its real users say in public reviews (App Store, Google Play, G2, Capterra, Trustpilot, Reddit, Hacker News, its own feature-request board), then ranks what they hate, what is missing and what is unsolved, turns it into a fix plan for the clone and a positioning angle you can sell. Every quote is real, verbatim and linked. Use when the user says \"what do people hate about X\", \"read the reviews\", \"how do I make mine better\", \"find the gap\", \"what features are missing\", \"how do I position this\", \"make it sellable\", or after /replica-diff.",
+   "ru": "Читает реальные отзывы пользователей: что ненавидят, чего нет, как позиционироваться",
+   "when": "Шаг 8. Работает и отдельно на приложение, которое только обдумываете",
+   "cat": "replica",
+   "for": [
+    "clone",
+    "idea"
+   ],
+   "kw": "отзывы боли пользователей позиционирование ниша",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:replica-launch",
+   "kind": "skill",
+   "name": "replica-launch",
+   "description": "Writes the launch for an app clone: the landing page built on the positioning angle, pricing set against the original's public pricing and its users' complaints, and the App Store and Google Play listing linted against the stores' limits and copycat rules. Use when the user says \"landing page\", \"pricing\", \"how much should I charge\", \"App Store listing\", \"store screenshots\", \"launch plan\", \"Product Hunt\", or after /replica-brand.",
+   "ru": "Лендинг, цена и листинг для сторов клона",
+   "when": "Шаг 10",
+   "cat": "replica",
+   "for": [
+    "clone"
+   ],
+   "kw": "лендинг цена листинг запуск клон",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:replica-recon",
+   "kind": "skill",
+   "name": "replica-recon",
+   "description": "Reverse-engineers any app into a recon map: screen inventory, user flows, component list, inferred data model and a feature matrix, from public pages, screenshots, app store listings, help docs and the user's own account. The first step of the Replica pack. Use when the user says \"clone this app\", \"reverse engineer X\", \"how does X work\", \"map out X\", \"what screens does X have\", \"I want to build my own version of X\", \"copy this app\", or pastes an app's URL or App Store link and wants to rebuild it.",
+   "ru": "Разведка: экраны, потоки, компоненты, модель данных и матрица функций чужого приложения",
+   "when": "Шаг 1 клона. Или просто понять, как устроено приложение",
+   "cat": "replica",
+   "for": [
+    "clone"
+   ],
+   "kw": "клон разведка reverse engineer экраны потоки матрица функций",
+   "eg": "/replica-recon https://...",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:replica-test",
+   "kind": "skill",
+   "name": "replica-test",
+   "description": "Clicks through every flow of an app clone and tests it for bugs: a test plan generated from the recon flows with happy paths and edge cases, Playwright end-to-end tests where possible, a browser click-through where not, and bug reports in a fixed format with severity, steps and evidence. Use when the user says \"test my clone\", \"find bugs\", \"QA this\", \"click through everything\", \"write e2e tests\", \"does it work\", or after /replica-build or /replica-backend.",
+   "ru": "Прокликивает все потоки клона: тест-план, e2e на Playwright, баг-репорты",
+   "when": "Шаг 6",
+   "cat": "replica",
+   "for": [
+    "clone"
+   ],
+   "kw": "тесты e2e playwright баги клон qa",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:review-animations",
+   "kind": "skill",
+   "name": "review-animations",
+   "description": "Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering philosophy. Default to flagging; approval is earned.",
+   "ru": "Строгое ревью кода анимаций по высокой планке: кривые, длительности, свойства, жесты",
+   "when": "Анимации написаны, надо найти, что не так. Только проверка",
+   "cat": "design",
+   "for": [
+    "expo",
+    "web"
+   ],
+   "kw": "ревью анимаций easing duration spring проверка движения motion review",
+   "vs": "Писать анимацию — expo-animation",
+   "eg": "Прогони review-animations по моим правкам",
+   "origin": "Emil Kowalski"
+  },
+  {
+   "id": "skill:skill-security-auditor",
+   "kind": "skill",
+   "name": "skill-security-auditor",
+   "description": "Security audit and vulnerability scanner for AI agent skills before installation. Use when: (1) evaluating a skill from an untrusted source, (2) auditing a skill directory or git repo URL for malicious code, (3) pre-install security gate for Claude Code plugins, OpenClaw skills, or Codex skills, (4) scanning Python scripts for dangerous patterns like os.system, eval, subprocess, network exfiltration, (5) detecting prompt injection in SKILL.md files, (6) checking dependency supply chain risks, (7) verifying file system access stays within skill boundaries. Triggers: \"audit this skill\", \"is this skill safe\", \"scan skill for security\", \"check skill before install\", \"skill security check\", \"skill vulnerability scan\".",
+   "ru": "Проверка ЧУЖОГО скилла или плагина до установки: опасные вызовы, утечки, prompt-injection",
+   "when": "Любой скилл из рилса, поста или репозитория. Сначала сюда, потом в папку Skills",
+   "cat": "quality",
+   "for": [],
+   "kw": "проверка скилла безопасность установка чужой injection supply chain",
+   "vs": "Свой код — absolute-audit",
+   "eg": "Проверь скилл по ссылке перед установкой",
+   "origin": "мой набор"
+  },
+  {
+   "id": "skill:stress-test",
+   "kind": "skill",
+   "name": "stress-test",
+   "description": "/em:stress-test — Business assumption stress testing. Use before betting on a plan whose core assumptions are unvalidated — e.g. stress-testing 'enterprise buyers will tolerate a 6-month pilot' or a hockey-stick revenue model.",
+   "ru": "Проверка допущений плана: на чём всё держится и что если это неправда",
+   "when": "Прежде чем ставить на план, где допущения не проверены",
+   "cat": "biz",
+   "for": [
+    "biz",
+    "idea"
+   ],
+   "kw": "допущения проверка гипотез риски план /em:stress-test",
+   "eg": "/em:stress-test план роста на 12 месяцев",
+   "origin": "мой набор"
+  }
+ ]
+}
