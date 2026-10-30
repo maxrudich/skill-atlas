@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26",
+ "generated": "2026-10-30",
  "categories": [
   {
    "id": "plan",
@@ -506,6 +506,10 @@
     {
      "ref": "skill:apple-hig-expert",
      "if": "Нужен аудит по Apple HIG и контрасту"
+    },
+    {
+     "ref": "skill:appllama-app-design-skill",
+     "if": "Нужен общий чек-лист качества: навигация, ассеты, проверка на симуляторе"
     }
    ]
   },
@@ -1113,6 +1117,22 @@
    "vs": "Полная переделка со скриншотами — агент apple-native-designer",
    "eg": "/apple-hig-expert проверь экран настроек",
    "origin": "мой набор"
+  },
+  {
+   "id": "skill:appllama-app-design-skill",
+   "kind": "skill",
+   "name": "appllama-app-design-skill",
+   "description": "Build native-feeling, benchmark-quality mobile app screens (Expo / React Native). Use when designing or implementing any mobile UI — screens, flows, onboarding, paywalls, tab bars, sheets, settings, empty states — or when polishing motion, navigation, typography, dark mode, or perceived performance. Enforces Apple HIG fidelity, semantic colors, native controls, anti-slop discipline, navigation semantics (push vs replace, modal vs sheet vs overlay, the one-way doors where back must not exist), purposeful Reanimated motion, a full-motion simulator-verified iteration loop, and a study-real-apps-first workflow (pairs with the Appllama MCP). Trigger on \"build a screen\", \"make this screen better\", \"design the onboarding\", \"wire up this flow\", \"polish the UI\", \"make it feel native\", or any mobile design/implementation task.",
+   "ru": "Общая планка качества мобильного экрана: HIG, навигация, строгая анимация, ассеты, проверка на симуляторе",
+   "when": "Проектируете или полируете экран, онбординг, пейвол, шторку или флоу в Expo. Чек-лист «как у топовых приложений»",
+   "cat": "mobile",
+   "for": [
+    "expo"
+   ],
+   "kw": "качество экрана онбординг пейвол навигация push replace шторка ассеты иконки симулятор dark mode benchmark appllama",
+   "vs": "Пересекается с expo-native-ui (стили), apple-design (физика движения) и qa-mobile (симулятор). Appllama MCP упоминается, но без него скилл работает",
+   "eg": "Сделай онбординг так, чтобы держал планку топовых приложений",
+   "origin": "Appllama (MIT)"
   },
   {
    "id": "skill:break-ui",
